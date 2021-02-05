@@ -13,15 +13,11 @@ def roman(number):
               "9": "IX"}
        
        dez = {}
-       for n in uni:
-              dez[n] = uni[n].replace("X", "C").replace("I", "X").replace("V", "L")
-
        cen = {}
-       for n in uni:
-              cen[n] = uni[n].replace("X", "M").replace("I", "C").replace("V", "D")
-
        mil = {}
        for n in uni:
+              dez[n] = uni[n].replace("X", "C").replace("I", "X").replace("V", "L")
+              cen[n] = uni[n].replace("X", "M").replace("I", "C").replace("V", "D")
               mil[n] = uni[n].replace("I", "M").replace("V", "V-")
 
        romano = []
