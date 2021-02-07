@@ -5,6 +5,6 @@ def distance(strand_a, strand_b):
     distance = 0
     for n, x in enumerate(strand_a):
         if x != strand_b[n]:
-            distance +=1
+            distance += 1
     
     return distance
