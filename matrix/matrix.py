@@ -1,9 +1,9 @@
 class Matrix:
     def __init__(self, matrix_string):
-        self.rows = []
+        input = matrix_string.split('\n')
         
         # Create rows
-        input = matrix_string.split('\n')
+        self.rows = []
         for row in input:
             new_row = row.split(' ')
             new_row = [int(n) for n in new_row]
