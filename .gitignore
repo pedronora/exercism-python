@@ -1,2 +1,3 @@
 */*.ipynb
 */.exercism/*
+__pycache__
