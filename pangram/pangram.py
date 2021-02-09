@@ -6,8 +6,6 @@ def is_pangram(sentence):
         if i not in unique_letters and i != '':
             unique_letters += i
 
-    result = ''.join(sorted(unique_letters))
-
-    if result == 'abcdefghijklmnopqrstuvwxyz':
+    if len(unique_letters) == len('abcdefghijklmnopqrstuvwxyz'):
         return True
     return False
