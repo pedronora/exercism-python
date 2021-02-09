@@ -1,5 +1,5 @@
 def count_words(sentence):
-    phrase = map(lambda c: c.lower() if c.isalpha() or c.isdigit() or (c == '\'') else " ", sentence)
+    phrase = map(lambda c: c.lower() if c.isalpha() or c.isdigit() or (c == '\'') else ' ', sentence)
 
     phrase = ''.join(phrase)
    
