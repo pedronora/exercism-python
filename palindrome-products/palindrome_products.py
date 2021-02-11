@@ -1,48 +1,48 @@
-def largest(min_factor, max_factor):
-    if max_factor < min_factor:
-        raise ValueError('max_factor must be greater than min_factor')
+# def largest(min_factor, max_factor):
+#     if max_factor < min_factor:
+#         raise ValueError('max_factor must be greater than min_factor')
 
-    max_palindrome = min_factor**2
-    for x in range(max_factor, min_factor, -1):
-        for y in range(x, min_factor, -1):
-            product = x * y
-            if product > max_palindrome:
-                if str(product) == str(product)[::-1]:
-                    max_palindrome = product
+#     max_palindrome = min_factor**2
+#     for x in range(max_factor, min_factor, -1):
+#         for y in range(x, min_factor, -1):
+#             product = x * y
+#             if product > max_palindrome:
+#                 if str(product) == str(product)[::-1]:
+#                     max_palindrome = product
 
-    factors = []
-    for x in range(min_factor, max_factor+1):
-        for y in range(min_factor, max_factor+1):
-            if x*y == max_palindrome:
-                if sorted([x, y]) not in factors:
-                    factors.append(sorted([x, y]))
-    if max_palindrome == min_factor**2:
-        return((None, []))
-    return (max_palindrome, factors)
+#     factors = []
+#     for x in range(min_factor, max_factor+1):
+#         for y in range(min_factor, max_factor+1):
+#             if x*y == max_palindrome:
+#                 if sorted([x, y]) not in factors:
+#                     factors.append(sorted([x, y]))
+#     if max_palindrome == min_factor**2:
+#         return((None, []))
+#     return (max_palindrome, factors)
 
 
-def smallest(min_factor, max_factor):
-    if max_factor < min_factor:
-        raise ValueError('min_factor must be greater than max_factor')
+# def smallest(min_factor, max_factor):
+#     if max_factor < min_factor:
+#         raise ValueError('min_factor must be greater than max_factor')
 
-    min_palindrome = max_factor**2
-    for x in range(min_factor, max_factor):
-        for y in range(x, max_factor):
-            product = x * y
-            if product < min_palindrome:
-                if str(product) == str(product)[::-1]:
-                    min_palindrome = product
+#     min_palindrome = max_factor**2
+#     for x in range(min_factor, max_factor):
+#         for y in range(x, max_factor):
+#             product = x * y
+#             if product < min_palindrome:
+#                 if str(product) == str(product)[::-1]:
+#                     min_palindrome = product
   
-    factors = []
-    for x in range(min_factor, max_factor+1):
-        for y in range(min_factor, max_factor+1):
-            if x*y == min_palindrome:
-                if sorted([x, y]) not in factors:
-                    factors.append(sorted([x, y]))
+#     factors = []
+#     for x in range(min_factor, max_factor+1):
+#         for y in range(min_factor, max_factor+1):
+#             if x*y == min_palindrome:
+#                 if sorted([x, y]) not in factors:
+#                     factors.append(sorted([x, y]))
 
-    if min_palindrome == max_factor**2:
-        return ((None, []))
-    return (min_palindrome, factors)
+#     if min_palindrome == max_factor**2:
+#         return ((None, []))
+#     return (min_palindrome, factors)
 
 # ================================================================ test session starts ================================================================
 # platform linux -- Python 3.8.6, pytest-6.2.2, py-1.10.0, pluggy-0.13.1
