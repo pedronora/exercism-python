@@ -34,8 +34,8 @@
 #                     min_palindrome = product
   
 #     factors = []
-#     for x in range(min_factor, max_factor+1):
-#         for y in range(min_factor, max_factor+1):
+#     for x in range(min_factor, max_factor):
+#         for y in range(min_factor, max_factor):
 #             if x*y == min_palindrome:
 #                 if sorted([x, y]) not in factors:
 #                     factors.append(sorted([x, y]))
