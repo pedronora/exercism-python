@@ -1,6 +1,6 @@
 def prime(number):
     if number == 0:
-        raise ValueError('Number must bigger than zero')
+        raise ValueError('Number must be bigger than zero')
     primes = [2]
     n = 3
     while len(primes) < number:
