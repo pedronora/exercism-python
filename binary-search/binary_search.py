@@ -15,7 +15,7 @@ def find(search_list, value):
             start = middle + 1
 
     else:
-        raise ValueError("Error")
+        raise ValueError("Value not found!")
 
 # Using recursion
 def find(search_list, value, start=0, end=None):
@@ -32,4 +32,4 @@ def find(search_list, value, start=0, end=None):
         else:
             return find(search_list, value, middle + 1, end)
 
-    raise ValueError('Error')
+    raise ValueError('Value not found!')
