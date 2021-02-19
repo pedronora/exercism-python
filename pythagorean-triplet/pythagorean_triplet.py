@@ -1,5 +1,6 @@
 def triplets_with_sum(number):
     # c² = a² + b² ==> c = (a² + b²)**(1/2)
+    # abs(a - b) < c
     triangle = []
     for b in range(number // 3):
         for a in range(b + 1, number // 2):
