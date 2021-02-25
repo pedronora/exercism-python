@@ -5,12 +5,11 @@ def rotate(text, key):
     cript = ''
     for l in text:
         if l.lower() in alpha:
-            index1 = alpha.index(l.lower())
-            index2 = (index1 + key) % 26
+            index = (alpha.index(l.lower()) + key) % 26
             if l.isupper():
-                cript += alpha[index2].upper()
+                cript += alpha[index].upper()
             else:
-                cript += alpha[index2]
+                cript += alpha[index]
         else:
             cript += l
     return cript
