@@ -15,4 +15,4 @@ class PhoneNumber:
         self.area_code = self.number[:3]
 
     def pretty(self):
-        return f'({self.area_code})-{self.number[3:6]}-{self.number[6:]}'        
+        return f'({self.area_code})-{self.number[3:6]}-{self.number[6:]}'
