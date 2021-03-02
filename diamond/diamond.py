@@ -17,14 +17,5 @@ def rows(letter):
         first_rows.append(row)
         row = ''
     
-    last_rows = []
-    for l in slice1[1:]:
-        for e in letters:
-            if l == e:
-                row+=l
-            else:
-                row+=' '
-        last_rows.append(row)
-        row = ''
-    all_rows = first_rows + last_rows
-    return all_rows
+    last_rows = first_rows[:-1][::-1]
+    return first_rows + last_rows
