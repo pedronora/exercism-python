@@ -3,18 +3,17 @@ def rows(letter):
 
     index = alphabet.index(letter)
     slice = alphabet[:index+1]
-    letters = slice[::-1] + slice[1:]    
-
-    row = ''
+    letters = slice[::-1] + slice[1:]
+    
     first_rows = []
     for l in slice:
+        row = ''
         for e in letters:
             if l == e:
                 row+=l
             else:
                 row+=' '
         first_rows.append(row)
-        row = ''
     
     last_rows = first_rows[:-1][::-1]
     return first_rows + last_rows
