@@ -4,7 +4,7 @@ class Rational:
     def __init__(self, numer, denom):
         gcd_value = Rational.gcd(numer, denom)
         self.numer = numer / gcd_value
-        self.denom = denom /gcd_value
+        self.denom = denom / gcd_value
 
     def gcd(a , b):
         while b:
