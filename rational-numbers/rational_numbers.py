@@ -35,31 +35,21 @@ class Rational:
     def __add__(self, other):
         den = mmc(self.denom, other.denom)
         num = (den/self.denom*self.numer) + (den/other.denom*other.numer)
-        divisor = simplify_fraction(num, den)
-        return Rational(num/divisor, den/divisor)
+        return Rational(num, den)
 
     def __sub__(self, other):
         den = mmc(self.denom, other.denom)
         num = (den/self.denom*self.numer) - (den/other.denom*other.numer)
-        divisor = simplify_fraction(num, den)
-        return Rational(num/divisor, den/divisor)
+        return Rational(num, den)
 
     def __mul__(self, other):
         num = self.numer * other.numer
         den = self.denom * other.denom
-        divisor = simplify_fraction(num, den)
-        return Rational(num/divisor, den/divisor)
+        return Rational(num, den)
 
     def __truediv__(self, other):
         num = self.numer * other.denom
         den = self.denom * other.numer
-        divisor = simplify_fraction(num, den)
-        num = num/divisor
-        den = den/divisor
-        if num < 0 and den < 0:
-            num, den = num*-1, den*-1
-        if den < 0:
-            num, den = num*-1, den*-1
         return Rational(num, den)   
 
     def __abs__(self):
@@ -70,8 +60,7 @@ class Rational:
     def __pow__(self, power):
         num = self.numer**power
         den = self.denom**power
-        divisor = simplify_fraction(num, den)
-        return Rational(num/divisor, den/divisor)
+        return Rational(num, den)
 
     def __rpow__(self, base):
         return base ** (self.numer/self.denom)
