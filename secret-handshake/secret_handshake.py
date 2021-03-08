@@ -3,6 +3,7 @@ handshakes = {1000: 'jump',
               10: 'double blink',
               1: 'wink'}
 
+
 def convert_to_binary(number):
     if number == 0:
         return 0
@@ -10,8 +11,7 @@ def convert_to_binary(number):
     binary = ''
     while number / 2 > 0:
         binary += str(number % 2)
-        number = number // 2
-    
+        number = number // 2   
     return int(binary[::-1])
 
 
