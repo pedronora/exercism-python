@@ -10,9 +10,7 @@ class Allergies:
             self.score = score
 
     def allergic_to(self, item):
-        if item in Allergies(self.score).lst:
-            return True
-        return False
+        return item in Allergies(self.score).lst
 
     @property
     def lst(self):
